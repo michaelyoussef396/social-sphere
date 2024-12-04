@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Header from "@/components/Header";
 import AboutUs from "@/components/About-us";
 import OurServices from "@/components/OurServices";
+import WhatWeDo from "@/components/WhatWeDo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <OurServices />
+      <WhatWeDo />
     </main>
   );
 }
