@@ -5,13 +5,16 @@ const AboutUs = () => {
     <section className="about-us py-16 bg-gray-50" id="about">
       <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-10">
         {/* Image Section */}
-        <div className="image w-full lg:w-1/2">
-          <div className="w-full h-64 lg:h-96 bg-gray-200 rounded-lg animate-pulse"></div>
-          {/* Replace the above div with <img src="path-to-image.jpg" alt="About Social Sphere" /> once the image is available */}
+        <div className="image w-full lg:w-1/2 md:w-2/5 sm:w-full order-2 md:order-none">
+          <img
+            src="aboutus.jpg"
+            alt="About Social Sphere"
+            className="w-full h-auto object-cover"
+          />
         </div>
 
         {/* Text Content Section */}
-        <div className="content w-full lg:w-1/2 text-center lg:text-left">
+        <div className="content w-full lg:w-1/2 md:w-3/5 sm:w-full text-center lg:text-left order-1 md:order-none">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             About <span className="text-blue-500">Social Sphere</span>
           </h2>
@@ -27,7 +30,6 @@ const AboutUs = () => {
             experience, we tailor every event to reflect the uniqueness of our clients,
             ensuring it exceeds expectations.
           </p>
-
         </div>
       </div>
     </section>
