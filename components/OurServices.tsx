@@ -55,9 +55,6 @@ export function OurServices() {
               key={index}
               containerClassName="col-span-1 relative rounded-xl overflow-hidden"
               className="relative text-cream bg-cover bg-center h-full"
-              style={{
-                backgroundImage: `url(${service.backgroundImage})`,
-              }}
             >
               <div className="absolute inset-0 bg-black/50"></div>
               <div className="relative z-10 p-6">
