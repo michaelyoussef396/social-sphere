@@ -56,6 +56,44 @@ body {
   );
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem; /* Tailwind: text-2xl */
+    line-height: 2.25rem; /* Tailwind: leading-7 */
+  }
+
+  p {
+    font-size: 1rem; /* Tailwind: text-base */
+    line-height: 1.5rem; /* Tailwind: leading-6 */
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem; /* Tailwind: py-3 px-6 */
+    font-size: 0.875rem; /* Tailwind: text-sm */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Tailwind: text-4xl */
+    line-height: 3.75rem; /* Tailwind: leading-10 */
+  }
+
+  p {
+    font-size: 1.125rem; /* Tailwind: text-lg */
+    line-height: 1.75rem; /* Tailwind: leading-7 */
+  }
+
+  .button {
+    padding: 1rem 2rem; /* Tailwind: py-4 px-8 */
+    font-size: 1rem; /* Tailwind: text-base */
+  }
+}
+
 .gradient-02 {
   position: absolute;
   width: 200px;

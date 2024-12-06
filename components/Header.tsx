@@ -1,29 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Lock scrolling when the menu is open
-  useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [mobileMenuOpen]);
-
-  const navigation = [
-    { id: 1, title: "Home", url: "#hero" },
-    { id: 2, title: "About", url: "#about" },
-    { id: 3, title: "Our Services", url: "#services" },
-    { id: 4, title: "Why Choose Us", url: "#why-choose-us" },
-    { id: 5, title: "What We Do", url: "#what-we-do" },
-  ];
+    const navigation = [
+      { id: 1, title: "Home", url: "#hero" },
+      { id: 1, title: "About", url: "#about" },
+      { id: 2, title: "Our Services", url: "#services" },
+      { id: 3, title: "Why Choose Us", url: "#why-choose-us" },
+      { id: 4, title: "What We Do", url: "#what-we-do" },
+      { id: 4, title: "Contact", url: "#what-we-do" },
+      
+    ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-cream border-b border-grayLight shadow-lg backdrop-blur-lg">
@@ -62,7 +52,7 @@ const Header = () => {
         <button
           className="lg:hidden text-text hover:text-gold focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+          aria-label="Toggle Menu"
         >
           {mobileMenuOpen ? (
             <svg
@@ -71,7 +61,6 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -87,7 +76,6 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -103,7 +91,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-screen bg-cream z-40 flex flex-col items-center justify-center space-y-6 transition-transform duration-300 ease-in-out"
+          className="fixed top-0 left-0 w-full h-screen bg-cream z-40 flex flex-col items-center justify-center space-y-6"
           aria-label="Mobile Navigation"
         >
           {/* Close Button */}
@@ -118,7 +106,6 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -140,15 +127,6 @@ const Header = () => {
               {item.title}
             </a>
           ))}
-
-          {/* Contact Button */}
-          <a
-            href="#signup"
-            className="text-center mt-4 bg-gold hover:bg-green text-cream font-cormorant font-medium text-xl uppercase py-3 px-6 rounded-lg transition duration-200"
-            onClick={() => setMobileMenuOpen(false)} // Close menu on click
-          >
-            Get in Contact
-          </a>
         </div>
       )}
     </header>
