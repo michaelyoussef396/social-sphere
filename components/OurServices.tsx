@@ -44,25 +44,35 @@ const services = [
 
 export function OurServices() {
   return (
-    <section id="services" className="py-16 bg-gray-50">
+    <section id="services" className="py-16 bg-background1">
       <div className="container mx-auto px-6 lg:px-12">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          Our <span className="text-blue-500">Services</span>
+        <h2 className="font-cormorant text-4xl font-bold text-center mb-12 text-text">
+          Our <span className="text-gold">Services</span>
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <WobbleCard
               key={index}
-              containerClassName="col-span-1 bg-cover bg-center"
-              className="text-white"
+              containerClassName="col-span-1 relative rounded-xl overflow-hidden"
+              className="relative text-cream bg-cover bg-center h-full"
+              style={{
+                backgroundImage: `url(${service.backgroundImage})`,
+              }}
             >
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="mb-4">{service.description}</p>
-              <ul className="list-disc list-inside space-y-2">
-                {service.list.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
+              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="relative z-10 p-6">
+                <h3 className="font-cormorant text-2xl font-bold mb-4">
+                  {service.title}
+                </h3>
+                <p className="font-cormorant mb-4">{service.description}</p>
+                <ul className="list-disc list-inside space-y-2">
+                  {service.list.map((item, idx) => (
+                    <li key={idx} className="font-cormorant">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </WobbleCard>
           ))}
         </div>

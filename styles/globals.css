@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Gilda+Display:regular|Cormorant:regular|Cormorant:300|Monsieur+La+Doulaise:regular');
 
 :root {
   --background: #ffffff;
