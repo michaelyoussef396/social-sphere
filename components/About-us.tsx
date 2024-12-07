@@ -16,7 +16,7 @@ const AboutUs = () => {
         {/* Text Content Section */}
         <div className="content w-full lg:w-1/2 md:w-3/5 sm:w-full text-center lg:text-left order-1 md:order-none">
           <h2 className="text-4xl font-bold font-cormorant text-gray-800 mb-4">
-            About <span className="text-blue-500 font-cormorant">Social Sphere</span>
+            About <span className="text-gold font-cormorant">Social Sphere</span>
           </h2>
           <p className="font-cormorant text-2xl text-gray-600 mb-6">
             At Social Sphere, we specialize in turning your special moments into

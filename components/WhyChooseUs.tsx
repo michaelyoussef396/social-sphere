@@ -44,7 +44,7 @@ export function WhyChooseUs() {
   return (
     <div id="why-choose-us" className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto bg-background1">
       <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-text">
+        <h4 className="text-gold text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium">
             Why Choose Us?
         </h4>
 

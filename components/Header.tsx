@@ -5,18 +5,17 @@ import React, { useState } from "react";
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const navigation = [
-      { id: 1, title: "Home", url: "#hero" },
-      { id: 1, title: "About", url: "#about" },
-      { id: 2, title: "Our Services", url: "#services" },
-      { id: 3, title: "Why Choose Us", url: "#why-choose-us" },
-      { id: 4, title: "What We Do", url: "#what-we-do" },
-      { id: 4, title: "Contact", url: "#what-we-do" },
-      
-    ];
+  const navigation = [
+    { id: 1, title: "Home", url: "#hero" },
+    { id: 2, title: "About", url: "#about" },
+    { id: 3, title: "Our Services", url: "#services" },
+    { id: 4, title: "Why Choose Us", url: "#why-choose-us" },
+    { id: 5, title: "What We Do", url: "#what-we-do" },
+    { id: 6, title: "Contact", url: "#signup" },
+  ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-cream border-b border-grayLight shadow-lg backdrop-blur-lg">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/80 text-white">
       <div className="flex items-center justify-between px-5 lg:px-10 py-4">
         {/* Logo Section */}
         <a className="block w-[12rem] flex items-center space-x-2" href="#hero">
@@ -41,7 +40,7 @@ const Header = () => {
             <a
               key={item.id}
               href={item.url}
-              className="text-text font-cormorant hover:text-gold font-medium text-sm uppercase transition duration-200"
+              className="font-cormorant hover:text-gold font-medium text-sm uppercase transition duration-200"
             >
               {item.title}
             </a>
@@ -50,9 +49,9 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-text hover:text-gold focus:outline-none"
+          className="lg:hidden hover:text-gold focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle Menu"
+          aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {mobileMenuOpen ? (
             <svg
@@ -61,6 +60,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -76,6 +76,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -91,12 +92,12 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-screen bg-cream z-40 flex flex-col items-center justify-center space-y-6"
+          className="fixed top-0 left-0 w-full h-screen bg-black/90 z-40 flex flex-col items-center justify-center space-y-6"
           aria-label="Mobile Navigation"
         >
           {/* Close Button */}
           <button
-            className="absolute top-5 right-5 text-text hover:text-gold focus:outline-none"
+            className="absolute top-5 right-5 hover:text-gold focus:outline-none"
             onClick={() => setMobileMenuOpen(false)}
             aria-label="Close Menu"
           >
@@ -106,6 +107,7 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -121,12 +123,21 @@ const Header = () => {
             <a
               key={item.id}
               href={item.url}
-              className="text-text font-cormorant hover:text-gold font-medium text-2xl uppercase transition duration-200"
+              className="text-white font-cormorant hover:text-gold font-medium text-2xl uppercase transition duration-200"
               onClick={() => setMobileMenuOpen(false)} // Close menu on click
             >
               {item.title}
             </a>
           ))}
+
+          {/* Contact Button */}
+          <a
+            href="#signup"
+            className="text-center mt-4 bg-gold hover:bg-green text-black font-cormorant font-medium text-xl uppercase py-3 px-6 rounded-lg transition duration-200"
+            onClick={() => setMobileMenuOpen(false)} // Close menu on click
+          >
+            Get in Contact
+          </a>
         </div>
       )}
     </header>

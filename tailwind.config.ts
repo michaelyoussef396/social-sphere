@@ -16,7 +16,7 @@ module.exports = {
         text: "#2e2e2e",
         accent: "#0a0a0a",
         cream: "#ffffff",
-        gold: "#a78b56",
+        gold: "#e8cccc",
         green: "#98b17c",
         grayLight: "#e6e4e1",
         elegantWhite: "#fdfdfd",
