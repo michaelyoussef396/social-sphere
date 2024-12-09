@@ -15,10 +15,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/80 text-white">
-      <div className="flex items-center justify-between px-5 lg:px-10 py-4">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/90 text-white shadow-lg">
+      <div className="flex items-center justify-between px-5 lg:px-10 py-4 max-w-screen-xl mx-auto">
         {/* Logo Section */}
-        <a className="block w-[12rem] flex items-center space-x-2" href="#hero">
+        <a className="flex items-center space-x-2" href="#hero">
           <img
             src="social sphere logo.png"
             alt="Social Sphere Logo"
@@ -92,7 +92,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-screen bg-black/90 z-40 flex flex-col items-center justify-center space-y-6"
+          className="fixed top-0 left-0 w-full h-screen bg-black/95 z-40 flex flex-col items-center justify-center space-y-6"
           aria-label="Mobile Navigation"
         >
           {/* Close Button */}
@@ -145,3 +145,4 @@ const Header = () => {
 };
 
 export default Header;
+

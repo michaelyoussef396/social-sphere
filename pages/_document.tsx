@@ -16,7 +16,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="antialiased bg-background1 text-text">
+      <body style={{ overflowX: "hidden", width: "100%" }} className="overflow-hidden !overflow-x-hidden antialiased bg-background1 text-text">
         <Main />
         <NextScript />
       </body>
