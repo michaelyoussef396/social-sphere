@@ -4,8 +4,7 @@ import styles from '@/styles/index';
 
 const About = () => (
   <section className={`${styles.paddings} relative z-10`}>
-    {/* Background Gradient */}
-    <div className="gradient-02 z-0" />
+
 
     {/* Content Container */}
     <div

@@ -8,6 +8,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
 import SignUpForm from "@/components/SignUpForm";
+import OurWorkSection from "@/components/OurWorkSection";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutUs />
       <OurServices />
       <WhyChooseUs />
+      <OurWorkSection />
       <WhatWeDo />
       <CTA />
       <SignUpForm />
