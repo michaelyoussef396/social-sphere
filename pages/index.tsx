@@ -9,6 +9,7 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
 import SignUpForm from "@/components/SignUpForm";
 import OurWorkSection from "@/components/OurWorkSection";
+import { Testimonials } from "@/components/Testimonials";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <AboutUs />
       <OurServices />
       <WhyChooseUs />
+      <Testimonials/>
       <OurWorkSection />
       <WhatWeDo />
       <CTA />

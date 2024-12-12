@@ -20,7 +20,7 @@ const workImages = [
 
 const OurWorkSection = () => {
   return (
-    <section className="bg-background1 py-16 px-4 md:px-16 !overflow-visible">
+    <section className="bg-background1 py-16 px-4 md:px-16 !overflow-visible" id='Our-Work-Section'>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-cormorant text-text mb-4">

@@ -10,8 +10,11 @@ const Header = () => {
     { id: 2, title: "About", url: "#about" },
     { id: 3, title: "Our Services", url: "#services" },
     { id: 4, title: "Why Choose Us", url: "#why-choose-us" },
+    { id: 4, title: "Testimonials", url: "#Testimonials" },
+    { id: 5, title: "Our Work", url: "#Our-Work-Section" },
     { id: 5, title: "What We Do", url: "#what-we-do" },
     { id: 6, title: "Contact", url: "#signup" },
+    
   ];
 
   return (
